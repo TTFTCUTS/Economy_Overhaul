@@ -1,0 +1,21 @@
+﻿l_english:
+
+ eco_planet_view_labour_summary_na:0 "-"
+
+ eco_planet_view_labour_general:0 "[this.value_eco_planet_view_labour_general_summary]"
+ eco_planet_view_labour_general_tooltip:0 "§H$mod_eco_labour_general_add$§!\nLabour: [this.eco_labour_general]\nDemand: [this.eco_labour_general_demand]"
+
+ eco_planet_view_labour_general_summary_high:0 "§G[this.value_eco_planet_view_labour_general_summary_value]%§!"
+ eco_planet_view_labour_general_summary_normal:0 "[this.value_eco_planet_view_labour_general_summary_value]%"
+ eco_planet_view_labour_general_summary_low:0 "§Y[this.value_eco_planet_view_labour_general_summary_value]%§!"
+ eco_planet_view_labour_general_summary_very_low:0 "§H[this.value_eco_planet_view_labour_general_summary_value]%§!"
+ eco_planet_view_labour_general_summary_extremely_low:0 "§R[this.value_eco_planet_view_labour_general_summary_value]%§!"
+
+ eco_planet_view_labour_specialist:0 "[this.value_eco_planet_view_labour_specialist_summary]"
+ eco_planet_view_labour_specialist_tooltip:0 "§H$mod_eco_labour_specialist_add$§!\nLabour: [this.eco_labour_specialist]\nDemand: [this.eco_labour_specialist_demand]"
+
+ eco_planet_view_labour_specialist_summary_high:0 "§G[this.value_eco_planet_view_labour_specialist_summary_value]%§!"
+ eco_planet_view_labour_specialist_summary_normal:0 "[this.value_eco_planet_view_labour_specialist_summary_value]%"
+ eco_planet_view_labour_specialist_summary_low:0 "§Y[this.value_eco_planet_view_labour_specialist_summary_value]%§!"
+ eco_planet_view_labour_specialist_summary_very_low:0 "§H[this.value_eco_planet_view_labour_specialist_summary_value]%§!"
+ eco_planet_view_labour_specialist_summary_extremely_low:0 "§R[this.value_eco_planet_view_labour_specialist_summary_value]%§!"

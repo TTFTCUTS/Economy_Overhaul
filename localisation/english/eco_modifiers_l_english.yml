@@ -1,0 +1,6 @@
+﻿l_english:
+ mod_eco_labour_general_add:0 "General Labor"
+ mod_eco_labour_general_demand_add:0 "$mod_eco_labour_general_add$ Required"
+
+ mod_eco_labour_specialist_add:0 "Specialist Labor"
+ mod_eco_labour_specialist_demand_add:0 "$mod_eco_labour_specialist_add$ Required"

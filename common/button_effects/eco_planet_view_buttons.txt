@@ -1,0 +1,27 @@
+eco_planet_view_labour_general_button_effect = {
+    potential = {
+        is_scope_type = planet
+        is_colony = yes
+        is_under_colonization = no
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = eco_planet_view_labour_general_tooltip
+    }
+}
+
+eco_planet_view_labour_specialist_button_effect = {
+    potential = {
+        is_scope_type = planet
+        is_colony = yes
+        is_under_colonization = no
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = eco_planet_view_labour_specialist_tooltip
+    }
+}

@@ -1,0 +1,15 @@
+d_eco_planet_mechanics = {
+    category = deposit_cat_eco_mechanics
+    is_for_colonizable = yes
+
+    potential = { always = no }
+    drop_weight = { weight = 0 }
+
+    planet_modifier = {
+        eco_labour_general_add = 100
+        #eco_labour_general_demand_add = 100
+
+        eco_labour_specialist_add = 100
+        #eco_labour_specialist_demand_add = 80
+    }
+}

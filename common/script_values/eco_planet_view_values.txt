@@ -1,0 +1,8 @@
+
+eco_planet_view_labour_summary = {
+    weight = value:eco_planet_labour_fulfillment_uncapped|type|$type$|
+
+    multiply = 100
+    floor = yes
+}
+

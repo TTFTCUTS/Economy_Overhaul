@@ -1,0 +1,20 @@
+
+building_eco_test = {
+
+    resources = {
+        category = planet_buildings
+
+        produces = {
+            trigger = { exists = owner }
+
+            minerals = 1000
+
+            multiplier = value:eco_planet_labour_production_multiplier_multi|typeA|general|amountA|200|typeB|specialist|amountB|100|
+        }
+    }
+
+    planet_modifier = {
+        eco_labour_general_demand_add = 200
+        eco_labour_specialist_demand_add = 100
+    }
+}

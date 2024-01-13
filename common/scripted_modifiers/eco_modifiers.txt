@@ -1,0 +1,39 @@
+eco_labour_general_add = {
+    category = planet
+    good = yes
+}
+eco_labour_general_mult = {
+    category = planet
+    good = yes
+    percentage = yes
+}
+
+eco_labour_general_demand_add = {
+    category = planet
+    neutral = yes
+    no_diff = yes
+}
+eco_labour_general_demand_mult = {
+    category = planet
+    percentage = yes
+}
+
+eco_labour_specialist_add = {
+    category = planet
+    good = yes
+}
+eco_labour_specialist_mult = {
+    category = planet
+    good = yes
+    percentage = yes
+}
+
+eco_labour_specialist_demand_add = {
+    category = planet
+    neutral = yes
+    no_diff = yes
+}
+eco_labour_specialist_demand_mult = {
+    category = planet
+    percentage = yes
+}

@@ -1,0 +1,14 @@
+spriteTypes = {
+
+    spriteType = {
+        name = GFX_eco_planet_view_labour_general
+        textureFile = gfx/interface/icons/pop_job.dds
+        effectFile = gfx/FX/buttonstate_onlydisable.shader
+    }
+
+    spriteType = {
+        name = GFX_eco_planet_view_labour_specialist
+        textureFile = gfx/interface/icons/species_right_living_standards.dds
+        effectFile = gfx/FX/buttonstate_onlydisable.shader
+    }
+}

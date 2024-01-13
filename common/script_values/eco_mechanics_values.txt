@@ -1,0 +1,53 @@
+
+eco_planet_labour_fulfillment_uncapped = {
+    weight = modifier:eco_labour_$type$_add
+    divide = value:_eco_planet_labour_fulfillment_demand|type|$type$|
+}
+
+eco_planet_labour_fulfillment = {
+    weight = value:eco_planet_labour_fulfillment_uncapped|type|$type$|
+    max = 1
+    min = 0
+}
+
+# resolves to demand unless demand is zero in which case it takes production instead so the fulfillment reads 1.0
+_eco_planet_labour_fulfillment_demand = {
+    weight = modifier:eco_labour_$type$_demand_add
+
+    modifier = {
+        check_modifier_value = {
+            modifier = eco_labour_$type$_demand_add
+            value <= 0
+        }
+        weight = modifier:eco_labour_$type$_add
+    }
+}
+
+eco_planet_labour_production_multiplier = {
+    weight = value:eco_planet_labour_fulfillment|type|$type$|
+}
+
+eco_planet_labour_production_multiplier_multi = {
+    base = 0
+    add = value:_eco_planet_labour_production|typeA|$typeA$|valueA|$amountA|1$|typeB|$typeA$|valueB|$amountA|1$|typeC|$typeB$|valueC|$amountB|1$|[[category]category|$category$|]
+    add = value:_eco_planet_labour_production|typeA|$typeB$|valueA|$amountB|1$|typeB|$typeA$|valueB|$amountA|1$|typeC|$typeB$|valueC|$amountB|1$|[[category]category|$category$|]
+}
+_eco_planet_labour_production = {
+    weight = value:eco_planet_labour_fulfillment|type|$typeA$|
+    multiply = $valueA$
+    multiply = value:_eco_planet_labour_demand_mult|type|$typeA$|[[category]category|$category$|]
+    divide = value:_eco_planet_labour_production_weight_divisor|typeB|$typeB$|valueB|$valueB$|typeC|$typeC$|valueC|$valueC$|[[category]category|$category$|]
+}
+_eco_planet_labour_production_weight_divisor = {
+    weight = value:_eco_planet_labour_demand_mult|type|$typeB$|mult|$valueB$|[[category]category|$category$|]
+    add = value:_eco_planet_labour_demand_mult|type|$typeC$|mult|$valueC$|[[category]category|$category$|]
+}
+_eco_planet_labour_demand_mult = {
+    base = 1
+    add = modifier:eco_labour_$type$_demand_mult
+    [[category]
+        add = modifier:eco_$category$_labour_$type$_demand_mult
+    ]
+    min = 0.0
+    [[mult] multiply = $mult$ ]
+}
