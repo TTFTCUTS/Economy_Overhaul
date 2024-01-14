@@ -1,0 +1,33 @@
+random = no
+
+text = {
+    trigger = {
+        check_variable_arithmetic = {
+            which = $value$
+            value < 0.5
+        }
+    }
+    localization_key = eco_colour_extremely_low
+}
+
+text = {
+    trigger = {
+        check_variable_arithmetic = {
+            which = $value$
+            value < 0.75
+        }
+    }
+    localization_key = eco_colour_very_low
+}
+
+text = {
+    trigger = {
+        check_variable_arithmetic = {
+            which = $value$
+            value < 1.0
+        }
+    }
+    localization_key = eco_colour_low
+}
+
+default = eco_colour_high

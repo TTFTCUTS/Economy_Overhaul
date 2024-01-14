@@ -11,5 +11,7 @@ d_eco_planet_mechanics = {
 
         eco_labour_specialist_add = 100
         #eco_labour_specialist_demand_add = 80
+
+        eco_labour_general_demand_mult = -0.2
     }
 }

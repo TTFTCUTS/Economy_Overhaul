@@ -1,3 +1,5 @@
+########################################################################################################################
+# labour values
 
 eco_planet_labour_fulfillment_uncapped = {
     weight = modifier:eco_labour_$type$_add
@@ -23,31 +25,50 @@ _eco_planet_labour_fulfillment_demand = {
     }
 }
 
-eco_planet_labour_production_multiplier = {
+# fulfillment value for two weighted labour types
+eco_planet_labour_fulfillment_two = {
+    base = 0
+    add = value:_eco_planet_labour_fulfillment_two_value|type|$type1$|amount|$amount1$|amount1|$amount1$|amount2|$amount2$|
+    add = value:_eco_planet_labour_fulfillment_two_value|type|$type2$|amount|$amount2$|amount1|$amount1$|amount2|$amount2$|
+}
+_eco_planet_labour_fulfillment_two_value = {
     weight = value:eco_planet_labour_fulfillment|type|$type$|
+    multiply = $amount$
+    divide = value:_eco_planet_labour_fulfillment_two_divisor|amount1|$amount1$|amount2|$amount2$|
+}
+_eco_planet_labour_fulfillment_two_divisor = {
+    weight = $amount1$
+    add = $amount2$
 }
 
-eco_planet_labour_production_multiplier_multi = {
-    base = 0
-    add = value:_eco_planet_labour_production|typeA|$typeA$|valueA|$amountA|1$|typeB|$typeA$|valueB|$amountA|1$|typeC|$typeB$|valueC|$amountB|1$|[[category]category|$category$|]
-    add = value:_eco_planet_labour_production|typeA|$typeB$|valueA|$amountB|1$|typeB|$typeA$|valueB|$amountA|1$|typeC|$typeB$|valueC|$amountB|1$|[[category]category|$category$|]
-}
-_eco_planet_labour_production = {
-    weight = value:eco_planet_labour_fulfillment|type|$typeA$|
-    multiply = $valueA$
-    multiply = value:_eco_planet_labour_demand_mult|type|$typeA$|[[category]category|$category$|]
-    divide = value:_eco_planet_labour_production_weight_divisor|typeB|$typeB$|valueB|$valueB$|typeC|$typeC$|valueC|$valueC$|[[category]category|$category$|]
-}
-_eco_planet_labour_production_weight_divisor = {
-    weight = value:_eco_planet_labour_demand_mult|type|$typeB$|mult|$valueB$|[[category]category|$category$|]
-    add = value:_eco_planet_labour_demand_mult|type|$typeC$|mult|$valueC$|[[category]category|$category$|]
-}
-_eco_planet_labour_demand_mult = {
-    base = 1
+eco_planet_labour_demand_modifier = {
+    weight = 1
     add = modifier:eco_labour_$type$_demand_mult
     [[category]
         add = modifier:eco_$category$_labour_$type$_demand_mult
     ]
-    min = 0.0
-    [[mult] multiply = $mult$ ]
+}
+
+eco_planet_labour_tooltip_denominator = {
+    weight = $value$
+    multiply = value:eco_planet_labour_demand_modifier|type|$type$|[[category]category|$category$|]
+
+    multiply = 10
+    round = yes
+    divide = 10
+}
+eco_planet_labour_tooltip_numerator = {
+    weight = value:eco_planet_labour_tooltip_denominator|value|$value$|type|$type$|[[category]category|$category$|]
+    multiply = value:eco_planet_labour_fulfillment|type|$type$|[[category]category|$category$|]
+
+    multiply = 10
+    round = yes
+    divide = 10
+}
+
+########################################################################################################################
+# production
+
+eco_planet_labour_production_multiplier = {
+    weight = value:eco_planet_labour_fulfillment|type|$type$|
 }

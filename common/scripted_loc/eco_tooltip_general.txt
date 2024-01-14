@@ -1,0 +1,14 @@
+defined_text = {
+    name = value_eco_tooltip_labour_general_colour
+    inline_script = {
+        script = eco/scripted_loc/value_eco_tooltip_labour_colour
+        value = value:eco_planet_labour_fulfillment|type|general|
+    }
+}
+defined_text = {
+    name = value_eco_tooltip_labour_specialist_colour
+    inline_script = {
+        script = eco/scripted_loc/value_eco_tooltip_labour_colour
+        value = value:eco_planet_labour_fulfillment|type|specialist|
+    }
+}

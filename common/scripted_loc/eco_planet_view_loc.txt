@@ -11,64 +11,15 @@ defined_text = {
 
 defined_text = {
     name = value_eco_planet_view_labour_general_summary_value
-    value = value:eco_planet_view_labour_summary|type|general|
+    value = value:eco_planet_view_labour_summary_uncapped|type|general|
 }
 
 defined_text = {
     name = value_eco_planet_view_labour_general_summary
-    random = no
-
-    text = {
-        trigger = {
-            check_modifier_value = {
-                modifier = eco_labour_general_demand_add
-                value <= 0
-            }
-        }
-        localization_key = eco_planet_view_labour_summary_na
+    inline_script = {
+        script = eco/scripted_loc/value_eco_planet_view_labour_summary
+        type = general
     }
-
-    text = {
-        trigger = {
-            check_variable_arithmetic = {
-                which = value:eco_planet_labour_fulfillment_uncapped|type|general|
-                value < 0.5
-            }
-        }
-        localization_key = eco_planet_view_labour_general_summary_extremely_low
-    }
-
-    text = {
-        trigger = {
-            check_variable_arithmetic = {
-                which = value:eco_planet_labour_fulfillment_uncapped|type|general|
-                value < 0.75
-            }
-        }
-        localization_key = eco_planet_view_labour_general_summary_very_low
-    }
-
-    text = {
-        trigger = {
-            check_variable_arithmetic = {
-                which = value:eco_planet_labour_fulfillment_uncapped|type|general|
-                value < 1.0
-            }
-        }
-        localization_key = eco_planet_view_labour_general_summary_low
-    }
-
-    text = {
-        trigger = {
-            check_variable_arithmetic = {
-                which = value:eco_planet_labour_fulfillment_uncapped|type|general|
-                value >= 1.2
-            }
-        }
-        localization_key = eco_planet_view_labour_general_summary_high
-    }
-
-    default = eco_planet_view_labour_general_summary_normal
 }
 
 # Specialist labour
@@ -83,62 +34,14 @@ defined_text = {
 
 defined_text = {
     name = value_eco_planet_view_labour_specialist_summary_value
-    value = value:eco_planet_view_labour_summary|type|specialist|
+    value = value:eco_planet_view_labour_summary_uncapped|type|specialist|
 }
 
 defined_text = {
     name = value_eco_planet_view_labour_specialist_summary
-    random = no
-
-    text = {
-        trigger = {
-            check_modifier_value = {
-                modifier = eco_labour_specialist_demand_add
-                value <= 0
-            }
-        }
-        localization_key = eco_planet_view_labour_summary_na
+    inline_script = {
+        script = eco/scripted_loc/value_eco_planet_view_labour_summary
+        type = specialist
     }
-
-    text = {
-        trigger = {
-            check_variable_arithmetic = {
-                which = value:eco_planet_labour_fulfillment_uncapped|type|specialist|
-                value < 0.5
-            }
-        }
-        localization_key = eco_planet_view_labour_specialist_summary_extremely_low
-    }
-
-    text = {
-        trigger = {
-            check_variable_arithmetic = {
-                which = value:eco_planet_labour_fulfillment_uncapped|type|specialist|
-                value < 0.75
-            }
-        }
-        localization_key = eco_planet_view_labour_specialist_summary_very_low
-    }
-
-    text = {
-        trigger = {
-            check_variable_arithmetic = {
-                which = value:eco_planet_labour_fulfillment_uncapped|type|specialist|
-                value < 1.0
-            }
-        }
-        localization_key = eco_planet_view_labour_specialist_summary_low
-    }
-
-    text = {
-        trigger = {
-            check_variable_arithmetic = {
-                which = value:eco_planet_labour_fulfillment_uncapped|type|specialist|
-                value >= 1.2
-            }
-        }
-        localization_key = eco_planet_view_labour_specialist_summary_high
-    }
-
-    default = eco_planet_view_labour_specialist_summary_normal
 }
+

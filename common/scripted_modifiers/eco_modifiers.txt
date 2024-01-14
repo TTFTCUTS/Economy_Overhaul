@@ -12,6 +12,7 @@ eco_labour_general_demand_add = {
     category = planet
     neutral = yes
     no_diff = yes
+    localize_with_value_key = yes
 }
 eco_labour_general_demand_mult = {
     category = planet
@@ -32,6 +33,7 @@ eco_labour_specialist_demand_add = {
     category = planet
     neutral = yes
     no_diff = yes
+    localize_with_value_key = yes
 }
 eco_labour_specialist_demand_mult = {
     category = planet

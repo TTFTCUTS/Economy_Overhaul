@@ -1,0 +1,17 @@
+
+defined_text = {
+    name = eco_district_mining_labour_general_tooltip_numerator
+    value = value:eco_planet_labour_tooltip_numerator|type|general|value|@eco_district_mining_labour_general_demand|
+}
+defined_text = {
+    name = eco_district_mining_labour_general_tooltip_denominator
+    value = value:eco_planet_labour_tooltip_denominator|type|general|value|@eco_district_mining_labour_general_demand|
+}
+defined_text = {
+    name = eco_district_mining_labour_specialist_tooltip_numerator
+    value = value:eco_planet_labour_tooltip_numerator|type|specialist|value|@eco_district_mining_labour_specialist_demand|
+}
+defined_text = {
+    name = eco_district_mining_labour_specialist_tooltip_denominator
+    value = value:eco_planet_labour_tooltip_denominator|type|specialist|value|@eco_district_mining_labour_specialist_demand|
+}
