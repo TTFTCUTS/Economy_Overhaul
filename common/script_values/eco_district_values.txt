@@ -1,0 +1,14 @@
+
+eco_district_mining_production_multiplier = {
+    weight = value:eco_district_production_multiplier_two|category|mining|labour_type1|general|labour_amount1|@eco_district_mining_labour_general_demand|labour_type2|specialist|labour_amount2|@eco_district_mining_labour_specialist_demand|resource|energy|min|@eco_district_mining_resource_shortage_minimum|
+}
+eco_district_mining_upkeep_multiplier = {
+    weight = value:eco_district_upkeep_multiplier_two|category|mining|labour_type1|general|labour_amount1|@eco_district_mining_labour_general_demand|labour_type2|specialist|labour_amount2|@eco_district_mining_labour_specialist_demand|
+}
+
+eco_district_mining_production_multiplier_tooltip = {
+    weight = value:eco_district_mining_production_multiplier
+
+    multiply = 100
+    floor = yes
+}

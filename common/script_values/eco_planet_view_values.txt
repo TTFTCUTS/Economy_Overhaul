@@ -12,3 +12,13 @@ eco_planet_view_labour_summary = {
     multiply = 100
     floor = yes
 }
+
+eco_planet_view_district_size = {
+    weight = 1
+    add = modifier:eco_district_size_mult
+    [[category]
+        add = modifier:eco_$category$_district_size_mult
+    ]
+    multiply = 100
+    floor = yes
+}

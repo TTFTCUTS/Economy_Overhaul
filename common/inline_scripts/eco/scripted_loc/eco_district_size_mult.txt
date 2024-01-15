@@ -1,0 +1,11 @@
+text = {
+    trigger = {
+        check_variable_arithmetic = {
+            which = value:eco_planet_view_district_size|category|$category$|
+            value > 100
+        }
+    }
+    localization_key = eco_planet_view_$category$_district_size_mult
+}
+
+default = eco_empty

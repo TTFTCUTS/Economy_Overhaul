@@ -12,3 +12,61 @@ defined_text = {
         value = value:eco_planet_labour_fulfillment|type|specialist|
     }
 }
+
+defined_text = {
+    name = eco_energy_shortage
+    inline_script = {
+        script = eco/scripted_loc/eco_resource_shortage
+        resource = energy
+    }
+}
+defined_text = {
+    name = eco_minerals_shortage
+    inline_script = {
+        script = eco/scripted_loc/eco_resource_shortage
+        resource = minerals
+    }
+}
+defined_text = {
+    name = eco_food_shortage
+    inline_script = {
+        script = eco/scripted_loc/eco_resource_shortage
+        resource = food
+    }
+}
+defined_text = {
+    name = eco_alloys_shortage
+    inline_script = {
+        script = eco/scripted_loc/eco_resource_shortage
+        resource = alloys
+    }
+}
+defined_text = {
+    name = eco_consumer_goods_shortage
+    inline_script = {
+        script = eco/scripted_loc/eco_resource_shortage
+        resource = consumer_goods
+    }
+}
+
+defined_text = {
+    name = eco_rare_crystals_shortage
+    inline_script = {
+        script = eco/scripted_loc/eco_resource_shortage
+        resource = rare_crystals
+    }
+}
+defined_text = {
+    name = eco_volatile_motes_shortage
+    inline_script = {
+        script = eco/scripted_loc/eco_resource_shortage
+        resource = volatile_motes
+    }
+}
+defined_text = {
+    name = eco_exotic_gases_shortage
+    inline_script = {
+        script = eco/scripted_loc/eco_resource_shortage
+        resource = exotic_gases
+    }
+}

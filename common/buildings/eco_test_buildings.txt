@@ -4,18 +4,24 @@ building_eco_test = {
     resources = {
         category = planet_buildings
 
-        produces = {    minerals = 1000     multiplier = value:eco_planet_labour_fulfillment_two|type1|general|amount1|@eco_district_mining_labour_general_demand|type2|specialist|amount2|@eco_district_mining_labour_specialist_demand| }
+        produces = {
+            minerals = 1000
+            multiplier = value:eco_district_mining_production_multiplier
+        }
 
-        upkeep = {      energy = 10     multiplier = value:eco_planet_labour_fulfillment_two|type1|general|amount1|@eco_district_mining_labour_general_demand|type2|specialist|amount2|@eco_district_mining_labour_specialist_demand| }
+        upkeep = {
+            energy = 10
+            multiplier = value:eco_district_mining_upkeep_multiplier
+        }
     }
 
     triggered_planet_modifier = {
         eco_labour_general_demand_add = @eco_district_mining_labour_general_demand
-        multiplier = value:eco_planet_labour_demand_modifier|type|general|
+        multiplier = value:eco_planet_labour_demand_modifier|category|mining|type|general|
     }
     triggered_planet_modifier = {
         eco_labour_specialist_demand_add = @eco_district_mining_labour_specialist_demand
-        multiplier = value:eco_planet_labour_demand_modifier|type|specialist|
+        multiplier = value:eco_planet_labour_demand_modifier|category|mining|type|specialist|
     }
 
     triggered_desc = { text = eco_district_mining_labour_info }

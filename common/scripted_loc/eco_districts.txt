@@ -1,17 +1,61 @@
+defined_text = {
+    name = eco_district_size_mult_value
+    value = value:eco_planet_view_district_size
+}
+defined_text = {
+    name = eco_district_size_mult
 
+    text = {
+        trigger = {
+            check_variable_arithmetic = {
+                which = value:eco_planet_view_district_size
+                value > 100
+            }
+        }
+        localization_key = eco_planet_view_district_size_mult
+    }
+
+    default = eco_empty
+}
+
+# mining districts category
+defined_text = {
+    name = eco_mining_district_size_mult_value
+    value = value:eco_planet_view_district_size|category|mining|
+}
+defined_text = {
+    name = eco_mining_district_size_mult
+    inline_script = {
+        script = eco/scripted_loc/eco_district_size_mult
+        category = mining
+    }
+}
+
+# district_mining
 defined_text = {
     name = eco_district_mining_labour_general_tooltip_numerator
-    value = value:eco_planet_labour_tooltip_numerator|type|general|value|@eco_district_mining_labour_general_demand|
+    value = value:eco_planet_labour_tooltip_numerator|category|mining|type|general|value|@eco_district_mining_labour_general_demand|
 }
 defined_text = {
     name = eco_district_mining_labour_general_tooltip_denominator
-    value = value:eco_planet_labour_tooltip_denominator|type|general|value|@eco_district_mining_labour_general_demand|
+    value = value:eco_planet_labour_tooltip_denominator|category|mining|type|general|value|@eco_district_mining_labour_general_demand|
 }
 defined_text = {
     name = eco_district_mining_labour_specialist_tooltip_numerator
-    value = value:eco_planet_labour_tooltip_numerator|type|specialist|value|@eco_district_mining_labour_specialist_demand|
+    value = value:eco_planet_labour_tooltip_numerator|category|mining|type|specialist|value|@eco_district_mining_labour_specialist_demand|
 }
 defined_text = {
     name = eco_district_mining_labour_specialist_tooltip_denominator
-    value = value:eco_planet_labour_tooltip_denominator|type|specialist|value|@eco_district_mining_labour_specialist_demand|
+    value = value:eco_planet_labour_tooltip_denominator|category|mining|type|specialist|value|@eco_district_mining_labour_specialist_demand|
+}
+defined_text = {
+    name = eco_district_mining_production_tooltip
+    value = value:eco_district_mining_production_multiplier_tooltip
+}
+defined_text = {
+    name = eco_district_mining_production_tooltip_colour
+    inline_script = {
+        script = eco/scripted_loc/value_eco_tooltip_labour_colour
+        value = value:eco_district_mining_production_multiplier
+    }
 }

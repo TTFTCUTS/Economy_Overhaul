@@ -2,6 +2,7 @@
 
  #######################################################################################################################
  # General
+ eco_empty:0 ""
 
  eco_colour_extremely_high:0 "§B"
  eco_colour_very_high:0 "§E"
@@ -15,6 +16,21 @@
  eco_labour_general_short:0 "General"
  eco_labour_specialist:0 "Specialist Labor"
  eco_labour_specialist_short:0 "Specialist"
+
+ # resource shortages
+ eco_planet_view_shortage:0 "Shortage"
+ eco_planet_view_shortage_colour:0 "§R"
+
+ eco_planet_view_shortage_energy:0 "$eco_planet_view_shortage_colour$£energy£ $energy$ $eco_planet_view_shortage$§!\n"
+ eco_planet_view_shortage_minerals:0 "$eco_planet_view_shortage_colour$£minerals£ $minerals$ $eco_planet_view_shortage$§!\n"
+ eco_planet_view_shortage_food:0 "$eco_planet_view_shortage_colour$£food£ $food$ $eco_planet_view_shortage$§!\n"
+ eco_planet_view_shortage_alloys:0 "$eco_planet_view_shortage_colour$£alloys£ $alloys$ $eco_planet_view_shortage$§!\n"
+ eco_planet_view_shortage_consumer_goods:0 "$eco_planet_view_shortage_colour$£consumer_goods£ $consumer_goods$ $eco_planet_view_shortage$§!\n"
+
+ eco_planet_view_shortage_rare_crystals:0 "$eco_planet_view_shortage_colour$£rare_crystals£ $rare_crystals$ $eco_planet_view_shortage$§!\n"
+ eco_planet_view_shortage_volatile_motes:0 "$eco_planet_view_shortage_colour$£volatile_motes£ $volatile_motes$ $eco_planet_view_shortage$§!\n"
+ eco_planet_view_shortage_exotic_gases:0 "$eco_planet_view_shortage_colour$£exotic_gases£ $exotic_gases$ $eco_planet_view_shortage$§!\n"
+
 
  #######################################################################################################################
  # Planet View Labour Values
@@ -40,7 +56,9 @@
  eco_planet_view_labour_specialist_summary_extremely_low:0 "§R[this.value_eco_planet_view_labour_specialist_summary_value]%§!"
 
  #######################################################################################################################
- # Tooltip Labour Values
+ # Tooltip Values
+
+ eco_planet_view_district_size_mult:0 "Size Multiplier: [this.eco_district_size_mult_value]%"
 
 
 

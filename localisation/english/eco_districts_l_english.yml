@@ -1,4 +1,8 @@
 ﻿l_english:
+
+
  eco_district_labour_title:0 "§HProduction Efficiency:§!"
 
- eco_district_mining_labour_info:0 "$eco_district_labour_title$\n$eco_labour_general$: [value_eco_tooltip_labour_general_colour][eco_district_mining_labour_general_tooltip_numerator]/[eco_district_mining_labour_general_tooltip_denominator]§! \n$eco_labour_specialist$: [value_eco_tooltip_labour_specialist_colour][eco_district_mining_labour_specialist_tooltip_numerator]/[eco_district_mining_labour_specialist_tooltip_denominator]§! \n"
+ eco_planet_view_mining_district_size_mult:0 "Size Multiplier: §Y[this.eco_mining_district_size_mult_value]%§!\n\n"
+
+ eco_district_mining_labour_info:0 "[eco_mining_district_size_mult]$eco_district_labour_title$ [eco_district_mining_production_tooltip_colour][eco_district_mining_production_tooltip]%§!\n[eco_energy_shortage]$eco_labour_general$: [value_eco_tooltip_labour_general_colour][eco_district_mining_labour_general_tooltip_numerator]/[eco_district_mining_labour_general_tooltip_denominator]§! \n$eco_labour_specialist$: [value_eco_tooltip_labour_specialist_colour][eco_district_mining_labour_specialist_tooltip_numerator]/[eco_district_mining_labour_specialist_tooltip_denominator]§! \n"

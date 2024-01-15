@@ -5,13 +5,24 @@ d_eco_planet_mechanics = {
     potential = { always = no }
     drop_weight = { weight = 0 }
 
+    resources = {
+        category = planet_deposits
+        upkeep = {
+            energy = 500
+        }
+    }
+
     planet_modifier = {
-        eco_labour_general_add = 100
+        eco_labour_general_add = 1000
         #eco_labour_general_demand_add = 100
 
-        eco_labour_specialist_add = 100
+        eco_labour_specialist_add = 1000
         #eco_labour_specialist_demand_add = 80
 
-        eco_labour_general_demand_mult = -0.2
+        #eco_labour_general_demand_mult = -0.2
+        #eco_mining_labour_general_demand_mult = -0.2
+        #eco_mining_labour_specialist_demand_mult = 0.1
+
+        #eco_district_size_mult = 0.1
     }
 }

@@ -47,6 +47,8 @@ eco_planet_labour_demand_modifier = {
     [[category]
         add = modifier:eco_$category$_labour_$type$_demand_mult
     ]
+
+    multiply = value:eco_district_size_mult[[category]|category|$category$|]
 }
 
 eco_planet_labour_tooltip_denominator = {
@@ -59,7 +61,7 @@ eco_planet_labour_tooltip_denominator = {
 }
 eco_planet_labour_tooltip_numerator = {
     weight = value:eco_planet_labour_tooltip_denominator|value|$value$|type|$type$|[[category]category|$category$|]
-    multiply = value:eco_planet_labour_fulfillment|type|$type$|[[category]category|$category$|]
+    multiply = value:eco_planet_labour_fulfillment|type|$type$|
 
     multiply = 10
     round = yes
@@ -69,6 +71,150 @@ eco_planet_labour_tooltip_numerator = {
 ########################################################################################################################
 # production
 
-eco_planet_labour_production_multiplier = {
+# production multiplier for ONE labour type
+eco_district_production_multiplier = {
+    base = 1
+
+    # labour efficiency - reuses upkeep since it just uses labour and doesn't change with resource shortage
+    max = value:_eco_district_labour_production_multiplier|type|$labour_type$|amount|$labour_amount$|[[category]category|$category$|]
+
+    # resource efficiency when there's only one input
+    [[resource]
+        max = value:_eco_district_production_resource_factor|resource|$resource$|
+    ]
+
+    # resource efficiency when there are two inputs
+    [[resource2]
+        max = value:_eco_district_production_resource_factor_two|resource1|$resource1|no$|weight1|$resource_weight1|1$|resource2|$resource2$|weight2|$resource_weight2|1$|
+    ]
+
+    min = 0
+
+    add = 0.001
+    multiply = 1000
+    floor = yes
+    multiply = 0.001
+    max = 1
+
+    multiply = value:eco_district_size_mult[[category]|category|$category$|]
+}
+
+# production multiplier for TWO labour types
+eco_district_production_multiplier_two = {
+    base = 1
+
+    # labour efficiency - reuses upkeep since it just uses labour and doesn't change with resource shortage
+    max = value:_eco_district_labour_production_multiplier_two|type1|$labour_type1$|amount1|$labour_amount1$|type2|$labour_type2$|amount2|$labour_amount2$|
+
+    # resource efficiency when there's only one input
+    [[resource]
+        max = value:_eco_district_production_resource_factor|resource|$resource$|min|$min|0$|
+    ]
+
+    # resource efficiency when there are two inputs
+    [[resource2]
+        max = value:_eco_district_production_resource_factor_two|resource1|$resource1|no$|weight1|$resource_weight1|1$|resource2|$resource2$|weight2|$resource_weight2|1$|min|$min|0$|
+    ]
+
+    min = 0
+
+    add = 0.001
+    multiply = 1000
+    floor = yes
+    multiply = 0.001
+    max = 1
+
+    multiply = value:eco_district_size_mult[[category]|category|$category$|]
+}
+
+_eco_district_labour_production_multiplier = {
     weight = value:eco_planet_labour_fulfillment|type|$type$|
+
+    max = 1
+    min = 0
+}
+
+_eco_district_labour_production_multiplier_two = {
+    weight = value:eco_planet_labour_fulfillment_two|type1|$type1$|amount1|$amount1$|type2|$type2$|amount2|$amount2$|
+
+    max = 1
+    min = 0
+}
+
+# upkeep multiplier for ONE labour type
+eco_district_upkeep_multiplier = {
+    weight = value:_eco_district_labour_production_multiplier|type|$labour_type$|
+
+    add = 0.001
+    multiply = 1000
+    floor = yes
+    multiply = 0.001
+    max = 1
+
+    multiply = value:eco_district_size_mult[[category]|category|$category$|]
+}
+
+# upkeep multiplier for TWO labour types
+eco_district_upkeep_multiplier_two = {
+    weight = value:_eco_district_labour_production_multiplier_two|type1|$labour_type1$|amount1|$labour_amount1$|type2|$labour_type2$|amount2|$labour_amount2$|
+
+    add = 0.001
+    multiply = 1000
+    floor = yes
+    multiply = 0.001
+    max = 1
+
+    multiply = value:eco_district_size_mult[[category]|category|$category$|]
+}
+
+_eco_district_production_resource_factor = {
+    base = 1
+
+    complex_trigger_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_deficit = $resource$
+            }
+        }
+        trigger_scope = owner
+        trigger = resource_income_to_expenditure_balance_ratio
+        parameters = {
+            resource = $resource$
+        }
+        mode = weight
+    }
+
+    max = 1
+    [[min]
+        multiply = value:eco_one_minus|value|$min$|
+        add = $min$
+    ]
+}
+
+_eco_district_production_resource_factor_two = {
+    base = 0
+    add = value:_eco_district_production_resource_factor_value|resource|$resource1$|weight|$weight1$|weight1|$weight1$|weight2|$weight2$|
+    add = value:_eco_district_production_resource_factor_value|resource|$resource2$|weight|$weight2$|weight1|$weight1$|weight2|$weight2$|
+
+    max = 1
+    min = $min|0$
+}
+_eco_district_production_resource_factor_value = {
+    weight = value:_eco_district_production_resource_factor|resource|$resource$|
+    multiply = $weight$
+    divide = value:_eco_district_production_resource_factor_divisor|weight1|$weight1$|weight2|$weight2$|
+}
+_eco_district_production_resource_factor_divisor = {
+    weight = $weight1$
+    add = $weight2$
+}
+
+eco_district_size_mult = {
+    weight = 1
+    add = modifier:eco_district_size_mult
+    [[category]
+        add = modifier:eco_$category$_district_size_mult
+    ]
+    multiply = value:scripted_modifier_mult|MODIFIER|eco_planet_district_size_mult|
 }

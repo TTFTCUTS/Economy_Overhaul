@@ -1,0 +1,12 @@
+text = {
+    trigger = {
+        exists = owner
+        owner = {
+            has_deficit = $resource$
+        }
+    }
+
+    localization_key = eco_planet_view_shortage_$resource$
+}
+
+default = eco_empty

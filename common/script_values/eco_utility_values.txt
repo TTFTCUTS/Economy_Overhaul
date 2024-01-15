@@ -1,0 +1,4 @@
+eco_one_minus = {
+    base = 1
+    subtract = $value$
+}
