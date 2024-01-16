@@ -1,0 +1,87 @@
+inline_script = {
+    key = district_eco_generator_standard
+
+    script = eco/districts/eco_district_capped_pair
+    icon = district_generator
+    category = generator
+    swap_category = generator
+    buildtime = 240
+
+    show = "eco_allow_district_generator_standard = yes"
+    potential = "eco_allow_district_generator_standard = yes"
+
+    content = "
+		resources = {
+			category = planet_districts_generator
+			cost = {
+			    minerals = @district_rural_cost
+			}
+		}
+	"
+}
+
+inline_script = {
+    key = district_eco_mining_standard
+
+    script = eco/districts/eco_district_capped_pair
+    icon = district_mining
+    category = mining
+    swap_category = mining
+    buildtime = 240
+
+    show = "eco_allow_district_mining_standard = yes"
+    potential = "eco_allow_district_mining_standard = yes"
+
+    content = "
+        resources = {
+            category = planet_districts_mining
+            cost = {
+			    minerals = @district_rural_cost
+			}
+
+            produces = {
+                minerals = 10
+                multiplier = value:eco_district_mining_production_multiplier
+            }
+
+            upkeep = {
+                energy = 2
+                multiplier = value:eco_district_mining_upkeep_multiplier
+            }
+        }
+
+        triggered_planet_modifier = {
+            planet_housing_add = 2
+        }
+
+        triggered_planet_modifier = {
+            eco_labour_general_demand_add = @eco_district_mining_labour_general_demand
+            multiplier = value:eco_planet_labour_demand_modifier|category|mining|type|general|
+        }
+        triggered_planet_modifier = {
+            eco_labour_specialist_demand_add = @eco_district_mining_labour_specialist_demand
+            multiplier = value:eco_planet_labour_demand_modifier|category|mining|type|specialist|
+        }
+
+        triggered_desc = { text = eco_district_mining_labour_info }
+	"
+}
+
+inline_script = {
+    key = district_eco_farming_standard
+
+    script = eco/districts/eco_district_capped_pair
+    icon = district_farming
+    category = farming
+    swap_category = farming
+    buildtime = 240
+
+    show = "eco_allow_district_farming_standard = yes"
+    potential = "eco_allow_district_farming_standard = yes"
+
+    content = "
+		resources = {
+			category = planet_districts_farming
+		}
+	"
+}

@@ -1,0 +1,15 @@
+allow = {
+    custom_tooltip = {
+        text = $caption$
+        or = {
+            not = { exists = owner }
+            owner = {
+                not = { has_technology = tech_eco_district_block }
+            }
+        }
+    }
+}
+
+prerequisites = {
+    tech_eco_district_block
+}

@@ -1,0 +1,8 @@
+conversion_ratio = 1
+convert_to = {
+    district_mining
+    district_mining_uncapped
+
+    district_eco_mining_standard
+    district_eco_mining_standard_uncapped
+}

@@ -1,0 +1,83 @@
+########################################################################################################################
+# categories
+
+eco_uses_generator_districts = {
+    [[scope]]
+    or = {
+        uses_district_set = standard
+        uses_district_set = hive_world
+        uses_district_set = machine_world
+    }
+}
+eco_uses_uncapped_generator_districts = {
+    [[scope]]
+    or = {
+        uses_district_set = hive_world
+        uses_district_set = machine_world
+    }
+}
+eco_uses_fallback_generator_district = {
+    nor = {
+        eco_allow_district_generator_standard = yes
+    }
+}
+
+eco_uses_mining_districts = {
+    [[scope]]
+    or = {
+        uses_district_set = standard
+        uses_district_set = hive_world
+        uses_district_set = machine_world
+    }
+}
+eco_uses_uncapped_mining_districts = {
+    [[scope]]
+    or = {
+        uses_district_set = hive_world
+        uses_district_set = machine_world
+        and = {
+            exists = $scope$
+            $scope$ = {
+                is_subterranean_empire = yes
+            }
+        }
+    }
+}
+eco_uses_fallback_mining_district = {
+    nor = {
+        eco_allow_district_mining_standard = yes
+    }
+}
+
+eco_uses_farming_districts = {
+    [[scope]]
+    or = {
+        uses_district_set = standard
+        uses_district_set = hive_world
+    }
+}
+eco_uses_uncapped_farming_districts = {
+    [[scope]]
+    or = {
+        uses_district_set = hive_world
+    }
+}
+eco_uses_fallback_farming_district = {
+    nor = {
+        eco_allow_district_farming_standard = yes
+    }
+}
+
+########################################################################################################################
+# specific districts
+
+
+eco_allow_district_generator_standard = {
+    has_deposit = d_eco_planet_mechanics
+}
+eco_allow_district_mining_standard = {
+    has_deposit = d_eco_planet_mechanics
+}
+eco_allow_district_farming_standard = {
+    has_deposit = d_eco_planet_mechanics
+}

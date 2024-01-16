@@ -1,0 +1,8 @@
+conversion_ratio = 1
+convert_to = {
+    district_generator
+    district_generator_uncapped
+
+    district_eco_generator_standard
+    district_eco_generator_standard_uncapped
+}

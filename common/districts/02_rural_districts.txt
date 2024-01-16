@@ -1,0 +1,71 @@
+@base_cost = 300
+@city_cost = 500
+
+inline_script = {
+	key = district_generator
+
+	script = eco/districts/eco_district_capped_pair
+	icon = district_hab_energy
+	category = generator
+	swap_category = generator
+	buildtime = 240
+
+	show = "eco_uses_fallback_generator_district = yes"
+	potential = "eco_uses_fallback_generator_district = yes"
+
+	content = "
+		resources = {
+			category = planet_districts_generator
+		}
+
+		triggered_desc = {
+			text = eco_generator_category_infrastructure_info
+		}
+	"
+}
+
+inline_script = {
+	key = district_mining
+
+	script = eco/districts/eco_district_capped_pair
+	icon = district_mining
+	category = mining
+	swap_category = mining
+	buildtime = 240
+
+	show = "eco_uses_fallback_mining_district = yes"
+	potential = "eco_uses_fallback_mining_district = yes"
+
+	content = "
+		resources = {
+			category = planet_districts_mining
+		}
+
+		triggered_desc = {
+			text = eco_mining_category_infrastructure_info
+		}
+	"
+}
+
+inline_script = {
+	key = district_farming
+
+	script = eco/districts/eco_district_capped_pair
+	icon = district_farming
+	category = farming
+	swap_category = farming
+	buildtime = 240
+
+	show = "eco_uses_fallback_farming_district = yes"
+	potential = "eco_uses_fallback_farming_district = yes"
+
+	content = "
+		resources = {
+			category = planet_districts_farming
+		}
+
+		triggered_desc = {
+			text = eco_farming_category_infrastructure_info
+		}
+	"
+}

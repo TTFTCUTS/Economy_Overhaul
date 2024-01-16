@@ -1,0 +1,13 @@
+tech_eco_district_block = {
+    tier = 5
+    area = society
+    category = { new_worlds }
+
+    cost = 0
+
+    potential = {
+        always = no
+    }
+
+    weight = 0
+}

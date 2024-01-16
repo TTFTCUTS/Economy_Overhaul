@@ -7,9 +7,9 @@ d_eco_planet_mechanics = {
 
     resources = {
         category = planet_deposits
-        upkeep = {
-            energy = 500
-        }
+        #upkeep = {
+        #    energy = 500
+        #}
     }
 
     planet_modifier = {
@@ -24,5 +24,18 @@ d_eco_planet_mechanics = {
         #eco_mining_labour_specialist_demand_mult = 0.1
 
         #eco_district_size_mult = 0.1
+    }
+
+    triggered_planet_modifier = {
+        district_eco_generator_standard_max = 1
+        multiplier = modifier:district_generator_max
+    }
+    triggered_planet_modifier = {
+        district_eco_mining_standard_max = 1
+        multiplier = modifier:district_mining_max
+    }
+    triggered_planet_modifier = {
+        district_eco_farming_standard_max = 1
+        multiplier = modifier:district_farming_max
     }
 }

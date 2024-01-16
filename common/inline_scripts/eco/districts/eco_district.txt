@@ -1,0 +1,23 @@
+
+base_buildtime = $buildtime$
+
+show_on_uncolonized = {
+    eco_uses_$category$_districts = { scope = from }
+    $show$
+}
+
+potential = {
+    eco_uses_$category$_districts = { scope = owner }
+    $potential$
+}
+
+inline_script = {
+    script = eco/districts/district_block
+    caption = eco_allow_$category$_district
+}
+
+inline_script = eco/districts/swaps/$swap_category$_swaps
+
+planet_modifier = {
+    eco_$category$_category_name = 1
+}

@@ -6,3 +6,12 @@
  mod_eco_labour_specialist_add:0 "$eco_labour_specialist$"
  mod_eco_labour_specialist_demand_add:0 ""
  #mod_eco_labour_specialist_demand_add:0 "$eco_labour_specialist$ Required"
+
+ eco_category_colour:0 "§E"
+ mod_eco_generator_category_name:0 "$eco_category_colour$£energy£ $eco_generator_category_name$§!\n"
+ mod_eco_generator_category_name_short:0 "$eco_empty$"
+ mod_eco_mining_category_name:0 "$eco_category_colour$£minerals£ $eco_mining_category_name$§!\n"
+ mod_eco_mining_category_name_short:0 "$eco_empty$"
+ mod_eco_farming_category_name:0 "$eco_category_colour$£food£ $eco_farming_category_name$§!\n"
+ mod_eco_farming_category_name_short:0 "$eco_empty$"
+

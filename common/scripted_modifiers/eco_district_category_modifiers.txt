@@ -1,0 +1,62 @@
+########################################################################################################################
+
+# generator
+eco_generator_category_name = {
+    category = planet
+    localize_with_value_key = yes
+}
+eco_generator_labour_general_demand_mult = {
+    category = planet
+    percentage = yes
+}
+eco_generator_labour_specialist_demand_mult = {
+    category = planet
+    percentage = yes
+}
+eco_generator_district_size_mult = {
+    category = planet
+    percentage = yes
+    neutral = yes
+}
+
+########################################################################################################################
+
+# mining
+eco_mining_category_name = {
+    category = planet
+    localize_with_value_key = yes
+}
+eco_mining_labour_general_demand_mult = {
+    category = planet
+    percentage = yes
+}
+eco_mining_labour_specialist_demand_mult = {
+    category = planet
+    percentage = yes
+}
+eco_mining_district_size_mult = {
+    category = planet
+    percentage = yes
+    neutral = yes
+}
+
+########################################################################################################################
+
+# farming
+eco_farming_category_name = {
+    category = planet
+    localize_with_value_key = yes
+}
+eco_farming_labour_general_demand_mult = {
+    category = planet
+    percentage = yes
+}
+eco_farming_labour_specialist_demand_mult = {
+    category = planet
+    percentage = yes
+}
+eco_farming_district_size_mult = {
+    category = planet
+    percentage = yes
+    neutral = yes
+}

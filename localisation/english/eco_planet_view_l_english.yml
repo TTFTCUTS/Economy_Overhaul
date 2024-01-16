@@ -31,6 +31,8 @@
  eco_planet_view_shortage_volatile_motes:0 "$eco_planet_view_shortage_colour$£volatile_motes£ $volatile_motes$ $eco_planet_view_shortage$§!\n"
  eco_planet_view_shortage_exotic_gases:0 "$eco_planet_view_shortage_colour$£exotic_gases£ $exotic_gases$ $eco_planet_view_shortage$§!\n"
 
+ tech_eco_district_block:0 " §P(This District is not buildable)§!"
+ tech_eco_district_block_desc:0 ""
 
  #######################################################################################################################
  # Planet View Labour Values

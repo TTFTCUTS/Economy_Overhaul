@@ -1,8 +1,23 @@
 ﻿l_english:
 
+ eco_generator_category_name:0 "Generator District"
+ eco_generator_category_name_plural:0 "Generator Districts"
+ eco_generator_category_infrastructure_info:0 "Build any £building£ §Y<TODO: energy infrastructure>§! to exploit these Districts"
 
- eco_district_labour_title:0 "§HProduction Efficiency:§!"
+ eco_mining_category_name:0 "Mining District"
+ eco_mining_category_name_plural:0 "Mining Districts"
+ eco_mining_category_infrastructure_info:0 "Build any £building£ §Y<TODO: mineral infrastructure>§! to exploit these Districts"
+
+ eco_farming_category_name:0 "Farming District"
+ eco_farming_category_name_plural:0 "Farming Districts"
+ eco_farming_category_infrastructure_info:0 "Build any £building£ §Y<TODO: food infrastructure>§! to exploit these Districts"
+
+
+ eco_district_efficiency_title:0 "§HDistrict Efficiency:§!"
 
  eco_planet_view_mining_district_size_mult:0 "Size Multiplier: §Y[this.eco_mining_district_size_mult_value]%§!\n\n"
 
- eco_district_mining_labour_info:0 "[eco_mining_district_size_mult]$eco_district_labour_title$ [eco_district_mining_production_tooltip_colour][eco_district_mining_production_tooltip]%§!\n[eco_energy_shortage]$eco_labour_general$: [value_eco_tooltip_labour_general_colour][eco_district_mining_labour_general_tooltip_numerator]/[eco_district_mining_labour_general_tooltip_denominator]§! \n$eco_labour_specialist$: [value_eco_tooltip_labour_specialist_colour][eco_district_mining_labour_specialist_tooltip_numerator]/[eco_district_mining_labour_specialist_tooltip_denominator]§! \n"
+ eco_district_mining_labour_info:0 "[eco_mining_district_size_mult]$eco_district_efficiency_title$ [eco_district_mining_production_tooltip_colour][eco_district_mining_production_tooltip]%§!\n[eco_energy_shortage]$eco_labour_general$: [value_eco_tooltip_labour_general_colour][eco_district_mining_labour_general_tooltip_numerator]/[eco_district_mining_labour_general_tooltip_denominator]§! \n$eco_labour_specialist$: [value_eco_tooltip_labour_specialist_colour][eco_district_mining_labour_specialist_tooltip_numerator]/[eco_district_mining_labour_specialist_tooltip_denominator]§! \n"
+
+ district_eco_mining_standard:0 "Mining Facility"
+ district_eco_mining_standard_desc:0 "These resource extraction centers drill deep into the crust to access mineral deposits."

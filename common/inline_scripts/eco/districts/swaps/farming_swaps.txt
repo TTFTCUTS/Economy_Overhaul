@@ -1,0 +1,8 @@
+conversion_ratio = 1
+convert_to = {
+    district_farming
+    district_farming_uncapped
+
+    district_eco_farming_standard
+    district_eco_farming_standard_uncapped
+}

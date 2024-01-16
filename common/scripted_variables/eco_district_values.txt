@@ -1,4 +1,5 @@
-
+@district_rural_cost = 300
+@district_city_cost = 500
 
 @eco_district_mining_labour_general_demand = 200
 @eco_district_mining_labour_specialist_demand = 100

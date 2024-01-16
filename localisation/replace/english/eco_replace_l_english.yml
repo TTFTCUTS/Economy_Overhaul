@@ -1,0 +1,19 @@
+﻿l_english:
+
+ district_generator:0 "Natural Energy Source"
+ district_generator_plural:0 "Natural Energy Sources"
+ district_generator_desc:0 "Good geography, ideal weather, or natural fuel reserves make this a favorable location for energy generation."
+ mod_district_generator_max:0 "Max $eco_generator_category_name_plural$"
+ planet_districts_generator:0 "$eco_generator_category_name_plural$"
+
+ district_mining:0 "Exploitable Mineral Vein"
+ district_mining_plural:0 "Exploitable Mineral Veins"
+ district_mining_desc:0 "The bounty of the depths, waiting to be unearthed."
+ mod_district_mining_max:0 "Max $eco_mining_category_name_plural$"
+ planet_districts_mining:0 "$eco_mining_category_name_plural$"
+
+ district_farming:0 "Fertile Region"
+ district_farming_plural:0 "Fertile Regions"
+ district_farming_desc:0 "Nutrient rich environs provide an ideal setting for focused agriculture."
+ mod_district_farming_max:0 "Max $eco_farming_category_name_plural$"
+ planet_districts_farming:0 "$eco_farming_category_name_plural$"
