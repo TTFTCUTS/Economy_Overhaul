@@ -1,0 +1,271 @@
+##########################################################################
+# Difficulty Modifiers - not applied to vassals of players
+##########################################################################
+
+# For playable empires
+difficulty_grand_admiral = {
+    stations_produces_mult = 1
+    planet_jobs_produces_mult = 1
+    country_naval_cap_mult = 0.6
+    ships_upkeep_mult = -0.4
+    starbase_shipyard_build_cost_mult = -0.4
+    pop_resettlement_cost_mult = -1.0
+    planet_stability_add = 20
+    trade_value_mult = 1.0
+    difficulty_modifier_mult = 1.0 # Only active with Difficulty Adjusted AI Modifiers setting
+}
+
+difficulty_admiral = {
+    stations_produces_mult = 0.75
+    planet_jobs_produces_mult = 0.75
+    country_naval_cap_mult = 0.45
+    ships_upkeep_mult = -0.3
+    starbase_shipyard_build_cost_mult = -0.3
+    pop_resettlement_cost_mult = -0.75
+    planet_stability_add = 15
+    trade_value_mult = 0.75
+    difficulty_modifier_mult = 0.75 # Only active with Difficulty Adjusted AI Modifiers setting
+}
+
+difficulty_commodore = {
+    stations_produces_mult = 0.5
+    planet_jobs_produces_mult = 0.5
+    country_naval_cap_mult = 0.3
+    ships_upkeep_mult = -0.2
+    starbase_shipyard_build_cost_mult = -0.2
+    pop_resettlement_cost_mult = -0.50
+    planet_stability_add = 10
+    trade_value_mult = 0.5
+    difficulty_modifier_mult = 0.5 # Only active with Difficulty Adjusted AI Modifiers setting
+}
+
+difficulty_captain = {
+    stations_produces_mult = 0.25
+    planet_jobs_produces_mult = 0.25
+    country_naval_cap_mult = 0.15
+    ships_upkeep_mult = -0.1
+    starbase_shipyard_build_cost_mult = -0.1
+    pop_resettlement_cost_mult = -0.25
+    planet_stability_add = 5
+    trade_value_mult = 0.25
+    difficulty_modifier_mult = 0.25 # Only active with Difficulty Adjusted AI Modifiers setting
+}
+
+difficulty_ensign = {
+}
+
+difficulty_cadet_player = {
+    stations_produces_mult = 0.5
+    planet_jobs_produces_mult = 0.5
+    country_naval_cap_mult = 0.5
+    planet_stability_add = 10
+    trade_value_mult = 0.5
+}
+
+difficulty_civilian_player = {
+    stations_produces_mult = 1.0
+    planet_jobs_produces_mult = 1.0
+    country_naval_cap_mult = 1.0
+    planet_stability_add = 20
+    trade_value_mult = 1.0
+    first_contact_speed_mult = 0.2
+}
+
+# For non-playable empires, scales to setting in country type
+difficulty_grand_admiral_npc = {
+    ship_weapon_damage = 0.50
+    ship_hull_mult = 0.50
+    ship_armor_mult = 0.50
+    ship_shield_mult = 0.50
+}
+
+difficulty_admiral_npc = {
+    ship_weapon_damage = 0.45
+    ship_hull_mult = 0.45
+    ship_armor_mult = 0.45
+    ship_shield_mult = 0.45
+}
+
+difficulty_commodore_npc = {
+    ship_weapon_damage = 0.40
+    ship_hull_mult = 0.40
+    ship_armor_mult = 0.40
+    ship_shield_mult = 0.40
+}
+
+difficulty_captain_npc = {
+    ship_weapon_damage = 0.35
+    ship_hull_mult = 0.35
+    ship_armor_mult = 0.35
+    ship_shield_mult = 0.35
+}
+
+difficulty_ensign_npc = {
+    ship_weapon_damage = 0.30
+    ship_hull_mult = 0.30
+    ship_armor_mult = 0.30
+    ship_shield_mult = 0.30
+}
+
+# Awakened Empires grow weaker over time
+awakened_empire_decadence = {
+    planet_jobs_produces_mult = -0.66
+    country_subject_power_penalty_mult = 2.0
+    ship_weapon_damage = -0.25
+    ship_hull_mult = -0.25
+    ship_armor_mult = -0.25
+    ship_shield_mult = -0.25
+}
+
+
+##########################################################################
+# Pop Modifiers
+##########################################################################
+
+# Base Pop Modifiers
+pop_base = {
+}
+
+# Base Pop Modifiers
+pop_base_with_happiness = {
+}
+
+# At 0% habitability
+pop_habitability = {
+    pop_amenities_usage_mult = 1
+    planet_pops_upkeep_mult = 1
+    planet_jobs_produces_mult = -0.5
+    pop_growth_speed = -0.5
+}
+
+# Happiness Levels
+pop_happiness_positive = {
+    pop_government_ethic_attraction = 0.50
+}
+
+pop_happiness_positive_slave = {
+    pop_ethic_authoritarian_attraction_mult = 1
+}
+
+# Also reduces stability
+pop_happiness_negative = {
+    pop_government_ethic_attraction = -0.50
+}
+
+pop_happiness_negative_slave = {
+    pop_ethic_egalitarian_attraction_mult = 5
+}
+
+recent_refugee = {
+    pop_happiness = 0.1
+}
+
+infiltration_happiness = {
+    pop_happiness = 0.3
+    icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+}
+
+planet_forced_growth = {
+    pop_growth_speed = -0.1
+    icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+    icon_frame = 3
+}
+
+planet_forced_assembly = {
+}
+
+planet_forced_decline = {
+}
+
+# Scales with planet trade value
+branch_office_value = {
+    planet_branch_offices_energy_produces_add = 1
+}
+
+# Only one of the two below will be applied
+has_branch_office = {
+}
+
+has_criminal_branch_office = {
+    planet_crime_add = 25
+}
+
+planet_devastation = {
+    planet_housing_mult = -1
+    planet_amenities_mult = -1
+    trade_value_mult = -1
+    planet_jobs_produces_mult = -1
+    planet_jobs_upkeep_mult = -1
+    pop_growth_speed_reduction = 1
+    planet_immigration_pull_mult = -1
+}
+
+occupation = {
+    pop_happiness = -0.10
+    planet_jobs_produces_mult = -0.5
+    planet_jobs_upkeep_mult = -0.5
+    planet_pops_upkeep_mult = -0.5
+    pop_growth_speed_reduction = 0.5
+    planet_immigration_pull_mult = -0.5
+}
+
+pop_uplifted = {
+    pop_happiness = 0.1
+}
+
+pop_citizenry_happiness = {
+    pop_happiness = 1.0
+}
+
+pop_planet_terraforming = {
+    pop_happiness = -0.2
+}
+
+pop_saved_from_slavery = {
+    pop_happiness = 0.1
+}
+
+pop_saved_from_purge = {
+    pop_happiness = 0.3
+}
+
+pop_recently_conquered = {
+    pop_happiness = -0.2
+    pop_government_ethic_attraction = -0.25
+}
+
+pop_angry_subterranean = {
+    pop_happiness = -0.2
+}
+
+pop_happiness_cheat = {
+    pop_happiness = 0.01
+}
+
+pop_troubled_succession = {
+    pop_happiness = -0.3
+}
+
+pop_drought = {
+    pop_happiness = -0.2
+}
+
+pop_did_not_kill_stalker = {
+    pop_happiness = -0.2
+}
+
+pop_synth_paranoia = {
+    pop_happiness = -0.2
+}
+
+pop_liberation_fever = {
+    pop_happiness = 0.3
+}
+
+lost_owned_pop_lesser = {
+    pop_happiness = -0.1
+}
+
+lost_owned_pop = {
+    pop_happiness = -0.2
+}

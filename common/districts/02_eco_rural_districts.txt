@@ -62,8 +62,6 @@ inline_script = {
             eco_labour_specialist_demand_add = @eco_district_mining_labour_specialist_demand
             multiplier = value:eco_planet_labour_demand_modifier|category|mining|type|specialist|
         }
-
-        triggered_desc = { text = eco_district_mining_labour_info }
 	"
 }
 

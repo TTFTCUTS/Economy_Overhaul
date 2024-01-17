@@ -4,7 +4,7 @@
 inline_script = {
 	key = district_generator
 
-	script = eco/districts/eco_district_capped_pair
+	script = eco/districts/eco_district_placeholder_capped_pair
 	icon = district_hab_energy
 	category = generator
 	swap_category = generator
@@ -27,7 +27,7 @@ inline_script = {
 inline_script = {
 	key = district_mining
 
-	script = eco/districts/eco_district_capped_pair
+	script = eco/districts/eco_district_placeholder_capped_pair
 	icon = district_mining
 	category = mining
 	swap_category = mining
@@ -50,7 +50,7 @@ inline_script = {
 inline_script = {
 	key = district_farming
 
-	script = eco/districts/eco_district_capped_pair
+	script = eco/districts/eco_district_placeholder_capped_pair
 	icon = district_farming
 	category = farming
 	swap_category = farming

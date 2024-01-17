@@ -1,53 +1,17 @@
-$key$ = {
+inline_script = {
+    script = eco/districts/eco_district_placeholder_capped_pair
+
+    key = $key$
+    category = $category$
+    swap_category = $swap_category$
+    buildtime = $buildtime$
     icon = $icon$
-    inline_script = {
-        script = eco/districts/eco_district
-        buildtime = $buildtime$
-        category = $category$
-        swap_category = $swap_category$
+    potential = "$potential$"
+    show = "$show$"
+    content = "
+        $content$
 
-        show = "
-            not = { eco_uses_uncapped_generator_districts = { scope = from } }
-			$show$
-
-			check_modifier_value = {
-                modifier = district_$category$_max
-                value > 0
-            }
-		"
-        potential = "
-            not = { eco_uses_uncapped_generator_districts = { scope = owner } }
-			$potential$
-
-			check_modifier_value = {
-                modifier = district_$category$_max
-                value > 0
-            }
-		"
-    }
-
-    $content$
+        triggered_desc = { text = $key$_labour_info }
+    "
 }
 
-$key$_uncapped = {
-    icon = $icon$
-    is_capped_by_modifier = no
-
-    inline_script = {
-        script = eco/districts/eco_district
-        buildtime = $buildtime$
-        category = $category$
-        swap_category = $swap_category$
-
-        show = "
-            eco_uses_uncapped_generator_districts = { scope = from }
-			$show$
-		"
-        potential = "
-            eco_uses_uncapped_generator_districts = { scope = owner }
-			$potential$
-		"
-    }
-
-    $content$
-}
